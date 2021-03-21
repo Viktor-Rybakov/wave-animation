@@ -1,0 +1,7 @@
+@font-face {
+  font-family: "Grandis";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("../fonts/Grandis-Medium.woff2") format("woff2");
+}
