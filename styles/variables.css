@@ -2,7 +2,8 @@
 
 :root {
   --grey-color: #ADB1BA;
-  --light-grey-color: #D7DCE2;
+  --light-grey-color: #d7dce2;
+  --light-grey-color-20: rgba(215, 220, 226, 0.2);
   --black-color: #191B1D;
   --white-color: #FFFFFF;
 }

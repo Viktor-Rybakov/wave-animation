@@ -37,7 +37,14 @@
 }
 
 .preloader__container {
-  padding: 40px;
+  display: grid;
+  padding: 40px 30px 50px;
+}
+
+@media (min-width: 720px) {
+  .preloader__container {
+    padding: 40px 99px 50px;
+  }
 }
 
 @media (min-wight: 1200px) {
@@ -49,9 +56,121 @@
 }
 
 .preloader__title {
+  grid-row: 1 / -1;
+  grid-column: 1 / -1;
   margin: 0;
-  font-size: clamp(2.5rem, -1.7857rem + 19.0476vw, 12.5rem);
+  font-size: 80px;
+  font-weight: 400;
   color: var(--white-color);
+}
+
+@media (min-width: 720px) {
+  .preloader__title {
+    font-size: 200px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .preloader__title {
+    font-size: 300px;
+  }
+}
+
+@media (min-width: 1680px) {
+  .preloader__title {
+    font-size: 500px;
+  }
+}
+
+.preloader__labels-container {
+  grid-row: 1 / -1;
+  grid-column: 1 / -1;
+  z-index: -1;
+  display: flex;
+  flex-direction: column;
+  padding: 10px 11px 3px 2px;
+}
+
+@media (min-width: 720px) {
+  .preloader__labels-container {
+    padding: 27px 27px 19px 14px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .preloader__labels-container {
+    padding: 45px 38px 30px 23px;
+  }
+}
+
+@media (min-width: 1680px) {
+  .preloader__labels-container {
+    padding: 80px 69px 50px 34px;
+  }
+}
+
+.preload__label {
+  position: relative;
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--light-grey-color);
+}
+
+
+.preload__label:nth-child(1) {
+  flex-grow: 60;
+  border-bottom: 1px solid var(--light-grey-color-20);
+  border-top: 1px solid var(--light-grey-color-20);
+}
+
+.preload__label:nth-child(2) {
+  flex-grow: 40;
+  border-bottom: 1px solid var(--light-grey-color-20);
+}
+
+.preload__label:nth-child(1)::before {
+  position: absolute;
+  content: '100';
+  top: -17px;
+  right: 0;
+  opacity: 1;
+  user-select: none;
+}
+
+.preload__label:nth-child(1)::after {
+  position: absolute;
+  content: '40';
+  bottom: 3px;
+  right: 0;
+  opacity: 1;
+  user-select: none;
+}
+
+.preload__label:nth-child(2)::after {
+  position: absolute;
+  content: '0';
+  bottom: 3px;
+  right: 0;
+  opacity: 1;
+  user-select: none;
+}
+
+@media (min-width: 720px) {
+  .preload__label {
+    font-size: 20px;
+  }
+
+  .preload__label:nth-child(1)::before {
+    top: -37px;
+  }
+
+  .preload__label:nth-child(1)::after {
+    bottom: 17px;
+  }
+
+  .preload__label:nth-child(2)::after {
+    bottom: 17px;
+  }
 }
 
 .preloader__wave {
