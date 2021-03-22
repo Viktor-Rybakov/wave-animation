@@ -41,7 +41,7 @@
   padding: 40px 30px 50px;
 }
 
-@media (min-width: 720px) {
+@media (min-width: 820px) {
   .preloader__container {
     padding: 40px 99px 50px;
   }
@@ -56,15 +56,16 @@
 }
 
 .preloader__title {
-  grid-row: 1 / -1;
-  grid-column: 1 / -1;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
   margin: 0;
   font-size: 80px;
   font-weight: 400;
   color: var(--white-color);
 }
 
-@media (min-width: 720px) {
+@media (min-width: 820px) {
   .preloader__title {
     font-size: 200px;
   }
@@ -78,34 +79,33 @@
 
 @media (min-width: 1680px) {
   .preloader__title {
+    top: calc(50% - 15px);
     font-size: 500px;
   }
 }
 
 .preloader__labels-container {
-  grid-row: 1 / -1;
-  grid-column: 1 / -1;
-  z-index: -1;
+  position: relative;
   display: flex;
   flex-direction: column;
-  padding: 10px 11px 3px 2px;
+  height: 80px;
 }
 
-@media (min-width: 720px) {
+@media (min-width: 820px) {
   .preloader__labels-container {
-    padding: 27px 27px 19px 14px;
+    height: 200px;
   }
 }
 
 @media (min-width: 1200px) {
   .preloader__labels-container {
-    padding: 45px 38px 30px 23px;
+    height: 300px;
   }
 }
 
 @media (min-width: 1680px) {
   .preloader__labels-container {
-    padding: 80px 69px 50px 34px;
+    height: 365px;
   }
 }
 
@@ -155,7 +155,7 @@
   user-select: none;
 }
 
-@media (min-width: 720px) {
+@media (min-width: 820px) {
   .preload__label {
     font-size: 20px;
   }
